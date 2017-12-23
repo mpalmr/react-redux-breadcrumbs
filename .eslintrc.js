@@ -2,7 +2,7 @@
 
 module.exports = {
   extends: 'airbnb-base',
-  parseOptions: {
+  parserOptions: {
     sourceType: 'script',
   },
 };

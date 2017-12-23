@@ -55,5 +55,4 @@ node_modules/
 ####################
 dist/
 lib/
-config.json
 .vscode/

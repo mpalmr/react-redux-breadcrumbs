@@ -1,0 +1,47 @@
+{
+  "name": "react-redux-breadcrumbs",
+  "version": "0.0.0",
+  "description": "Breadcrumb component for React with Redux",
+  "main": "lib/index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "start": "npm run clean && npm run babel -- -w",
+    "build": "npm run clean -- dist && shell-exec 'npm run babel'",
+    "clean": "rimraf lib",
+    "babel": "babel src -d lib -s --ignore .eslintrc.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mpalmr/react-redux-breadcrumbs.git"
+  },
+  "keywords": [
+    "react",
+    "redux",
+    "component",
+    "breadcrumbs"
+  ],
+  "author": "Matthew Palmer <mspalmer91@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mpalmr/react-redux-breadcrumbs/issues"
+  },
+  "homepage": "https://github.com/mpalmr/react-redux-breadcrumbs#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-eslint": "^8.0.3",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "eslint": "^4.13.1",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.5.1",
+    "rimraf": "^2.6.2",
+    "shell-executor": "^4.0.0"
+  }
+}
