@@ -1,0 +1,7 @@
+{
+  "require": ["babel-register"],
+  "include": ["src/**/*.js"],
+  "exclude": ["**/.eslintrc.js"],
+  "sourceMap": false,
+  "instrument": true
+}

@@ -9,6 +9,7 @@ module.exports = {
     mocha: true,
   },
   rules: {
+    'quotes': 0,
     'func-names': 0,
     'prefer-arrow-callback': 0,
     'import/no-extraneous-dependencies': [2, {
