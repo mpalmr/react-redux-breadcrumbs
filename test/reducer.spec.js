@@ -4,7 +4,7 @@ import reducer, { defaultState } from '../src/reducer';
 import { SET_TRAIL } from '../src/action-types';
 
 
-describe("reducer()", function () {
+describe("reducer(state, action)", function () {
   it("when called with no parameters returns the default state", function () {
     assert.deepStrictEqual(reducer(), defaultState);
   });
