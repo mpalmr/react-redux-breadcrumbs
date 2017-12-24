@@ -31,7 +31,10 @@
     "url": "https://github.com/mpalmr/react-redux-breadcrumbs/issues"
   },
   "homepage": "https://github.com/mpalmr/react-redux-breadcrumbs#readme",
-  "dependencies": {},
+  "dependencies": {
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0"
+  },
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-eslint": "^8.0.3",
@@ -40,6 +43,7 @@
     "babel-polyfill": "^6.26.0",
     "babel-preset-env": "^1.6.1",
     "babel-preset-power-assert": "^1.0.0",
+    "babel-preset-react": "^6.24.1",
     "cross-env": "^5.1.3",
     "eslint": "^4.13.1",
     "eslint-config-airbnb": "^16.1.0",
