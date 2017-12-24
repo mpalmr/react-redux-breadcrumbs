@@ -1,4 +1,4 @@
-import { SET_TRAIL, PUSH } from './action-types';
+import { SET_TRAIL, PUSH, POP } from './action-types';
 
 
 export const defaultState = {
@@ -19,6 +19,13 @@ export default function reducer(state = defaultState, action = {}) {
       return {
         ...state,
         trail: state.trail.concat(action.segment),
+      };
+
+
+    case POP:
+      return {
+        ...state,
+        trail: state.trail.slice(0, -1),
       };
 
 

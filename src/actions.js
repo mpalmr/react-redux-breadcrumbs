@@ -1,4 +1,4 @@
-import { SET_TRAIL, PUSH } from './action-types';
+import { SET_TRAIL, PUSH, POP } from './action-types';
 
 
 export function setTrail(trail) {
@@ -16,4 +16,9 @@ export function push(segment) {
     type: PUSH,
     segment,
   };
+}
+
+
+export function pop() {
+  return { type: POP };
 }

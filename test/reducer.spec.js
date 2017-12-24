@@ -1,7 +1,7 @@
 import assert from 'assert';
 
 import reducer, { defaultState } from '../src/reducer';
-import { SET_TRAIL, PUSH } from '../src/action-types';
+import { SET_TRAIL, PUSH, POP } from '../src/action-types';
 
 
 describe("reducer(state, action)", function () {
@@ -48,6 +48,25 @@ describe("reducer(state, action)", function () {
           { a: 5 },
         ],
       });
+    });
+  });
+
+
+  describe("POP", function () {
+    it("removes the last item in `state.trail`", function () {
+      const state = {
+        ...defaultState,
+        trail: [{ a: 5 }, { a: 2 }],
+      };
+
+      assert.deepStrictEqual(reducer(state, { type: POP }), {
+        ...defaultState,
+        trail: [{ a: 5 }],
+      });
+    });
+
+    it("does nothing if trail is empty", function () {
+      assert.deepStrictEqual(reducer(defaultState, { type: POP }), defaultState);
     });
   });
 });

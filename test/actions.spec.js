@@ -1,7 +1,7 @@
 import assert from 'assert';
 
-import { setTrail, push } from '../src/actions';
-import { SET_TRAIL, PUSH } from '../src/action-types';
+import { setTrail, push, pop } from '../src/actions';
+import { SET_TRAIL, PUSH, POP } from '../src/action-types';
 
 
 describe("actions", function () {
@@ -25,6 +25,13 @@ describe("actions", function () {
         type: PUSH,
         segment: { a: 5 },
       });
+    });
+  });
+
+
+  describe("pop()", function () {
+    it("returns a POP action", function () {
+      assert.deepStrictEqual(pop(), { type: POP });
     });
   });
 });
