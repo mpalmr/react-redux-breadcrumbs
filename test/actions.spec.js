@@ -1,7 +1,7 @@
 import assert from 'assert';
 
-import { setTrail } from '../src/actions';
-import { SET_TRAIL } from '../src/action-types';
+import { setTrail, push } from '../src/actions';
+import { SET_TRAIL, PUSH } from '../src/action-types';
 
 
 describe("actions", function () {
@@ -14,6 +14,16 @@ describe("actions", function () {
       assert.deepStrictEqual(setTrail([]), {
         type: SET_TRAIL,
         trail: [],
+      });
+    });
+  });
+
+
+  describe("push(segment)", function () {
+    it("returns a PUSH action", function () {
+      assert.deepStrictEqual(push({ a: 5 }), {
+        type: PUSH,
+        segment: { a: 5 },
       });
     });
   });

@@ -1,4 +1,4 @@
-import { SET_TRAIL } from './action-types';
+import { SET_TRAIL, PUSH } from './action-types';
 
 
 export const defaultState = {
@@ -13,6 +13,14 @@ export default function reducer(state = defaultState, action = {}) {
         ...state,
         trail: action.trail,
       };
+
+
+    case PUSH:
+      return {
+        ...state,
+        trail: state.trail.concat(action.segment),
+      };
+
 
     default:
       return state;
